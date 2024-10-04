@@ -382,3 +382,47 @@ hr {
         left: 0%;
     }
 }
+
+.inner_scrol_btn {
+    text-decoration: none;
+    color: black;
+}
+.circle {
+    position: relative;/*относительное позиционирование*/
+    width: 200px;/*ширина круга*/
+    height: 200px;/*высота круга*/
+    border-radius: 50%;/*скругление углов*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    position: absolute;/*абсолютное позиционирование*/
+    width: 150px;
+    height: 150px;     background: url(img.jpg);/*изображение*/
+    background-size: cover;/*картинка пропорционально растянута на весь блок*/
+    border-radius: 50%;
+}
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: animate 10s linear infinite;/*свойства анимации*/
+}
+@keyframes animate {
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+p span {
+    position: absolute;
+    left: 50%;/*позиция слева*/
+    font-size: 1.2em;/*размер шрифта*/
+    text-transform: uppercase;/*большие буквы*/
+    transform-origin: 0 100px;/*точка исхода трансформации*/
+}
