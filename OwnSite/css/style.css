@@ -5,6 +5,9 @@
     overflow-x: none;
     /* border: 1px solid black; */
 }
+html {
+    scroll-behavior: smooth;
+  }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
@@ -81,6 +84,10 @@ hr {
 .inner_scrol {
     position: relative;
     left: 20%;
+    transition: transform .5s ease;
+}
+.inner_scrol:hover {
+    transform: rotate(180deg);
 }
 .inner_container {
     display: flex;
