@@ -18,14 +18,16 @@ hr {
     border: 0;
 }
 .wrapper {
+    margin-top: 10%;
     background-color: white;
     width: 100%;
     height: 100vh;
 }
 .wrapper_about {
+    margin-top: 10%;
     background-color: white;
     width: 100%;
-    height: 60vh;
+    height: auto;
 }
 .nav {
     padding-top: 1%;
@@ -72,7 +74,7 @@ hr {
     max-width: 720px;
     width: 325px;
     display: flex;
-    flex-wrap: nowrap !important;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
@@ -177,8 +179,7 @@ hr {
 .works_container {
     background-color: white;
     width: 100%;
-    height: 60vh;
-    margin-top: 5%;
+    height: 90%;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -186,6 +187,7 @@ hr {
     justify-content: center;
 }
 .work {
+    width: -webkit-fill-available;
     margin-left: 1%;
     margin-right: 1%;
     max-width: 400px;
@@ -272,6 +274,7 @@ hr {
     margin-top: 5%;
 }
 #fotter {
+    width: 100%;
     margin-bottom: 1%;
 }
 .fotter_btn {
@@ -339,11 +342,12 @@ hr {
     align-items: center;
 }
 .logo{
-    position: absolute;/*абсолютное позиционирование*/
+    position: absolute;
     width: 150px;
-    height: 150px;     background: url(img.jpg);/*изображение*/
-    background-size: cover;/*картинка пропорционально растянута на весь блок*/
-    border-radius: 50%;
+    height: 150px;
+    background: url(../img/96x96.png);
+    background-size: cover;
+    zoom: 0.5;
 }
 .text {
     position: absolute;
@@ -458,6 +462,14 @@ input:active {
     top: 5%;
 }
 
+#section1{
+    margin: 0;
+}
+
+#about_work_title {
+    font-size: clamp(15px, 10vw, 100px);
+}
+
 @media (max-width: 1200px) {
     .about_com {
         display: none;
@@ -482,7 +494,7 @@ input:active {
         display: flex;
         background-color: white;
         width: 100%;
-        height: 60vh;
+        height: auto;
         flex-direction: column;
         align-items: center;
     }
@@ -490,6 +502,7 @@ input:active {
 @media (max-width: 630px) {
     .nav {
         justify-content: center;
+        flex-wrap: wrap;
     }
     .inner_scrol{
         display: none;
@@ -535,7 +548,7 @@ input:active {
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 350px) {
     .modal {
         width: 250px;
         left: 87%;

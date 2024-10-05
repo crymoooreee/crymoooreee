@@ -14,11 +14,12 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone']) &&
 
     // Отправка письма
     if (mail($to, $tema, $message, $headers)) {
-        echo "Письмо отправлено успешно!";
+        echo '<script>alert("Письмо отправлено успешно!")</script>';
     } else {
-        echo "Ошибка отправки письма!";
+        echo '<script>alert("Ошибка отправки письма!")</script>';
+
     }
 } else {
-    echo "Не все поля заполнены!";
+    echo '<script>alert("Не все поля заполнены!")</script>';
 }
 ?>
