@@ -412,6 +412,26 @@ body .bg-body-secondary {
 .work_img {
     border-radius: 15px;
 }
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #9747FF !important;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #9747ff42 !important;
+}
+.btn-primary {
+    --bs-btn-bg: #9747FF !important;
+    --bs-btn-border-color: #9747FF !important;
+    --bs-btn-hover-bg: #7437c5 !important;
+    --bs-btn-hover-border-color: #7437c5 !important;
+    --bs-btn-active-bg: #9747FF !important;
+    --bs-btn-active-border-color: #7437c5 !important;
+    --bs-btn-focus-shadow-rgb: #9747FF !important;
+    --bs-btn-disabled-bg: #9747FF !important;
+    --bs-btn-disabled-border-color: #9747FF !important;
+}
+
+
 @media (max-width: 1200px) {
     .about_com {
         display: none;
