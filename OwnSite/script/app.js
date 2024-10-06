@@ -5,10 +5,9 @@ const text = document.querySelector(".text p");
         .join("");
 
 const modal = document.querySelector('.modal');
-const modal_close = document.querySelector('.modal_close');
+const close_btn = document.querySelector('.btn-close');
 const talk_btn = document.querySelector('.talk_btn');
 const aboutBtn = document.querySelector('.about_btn'); // Изменено имя переменной
-const modal_btn = document.querySelector('.modal_btn'); // Изменено имя переменной
 let modalActive = false; // Инициализируем переменную для отслеживания состояния модального окна
 
 // Добавляем обработчик события для кнопки
@@ -16,53 +15,50 @@ aboutBtn.addEventListener('click', () => {
     modalActive = !modalActive; // Изменяем состояние модального окна
 
     if (modalActive) {
-        modal.style.display = 'block';
+        modal.setAttribute('style', 'display: block !important;');
         setTimeout(function() {
                 modal.style.opacity = 1;
-                modal.style.transition = 'opacity .5s ease';
-        }, 100)
-    } else {
-        modal.style.display = 'none';
+                modal.style.transition = 'opacity 1s ease';
+        }, 300)
+} else {
+        modal.setAttribute('style', 'display: none !important;');
         setTimeout(function() {
                 modal.style.opacity = 0;
-                modal.style.transition = 'opacity .5s ease';
-        }, 100)
+                modal.style.transition = 'opacity 1s ease';
+        }, 300)
     }
 });
 talk_btn.addEventListener('click', () => {
 modalActive = !modalActive; // Изменяем состояние модального окна
     
         if (modalActive) {
-            modal.style.display = 'block';
+            modal.style.display = 'block !important';
+            setTimeout(function() {
+                    modal.style.opacity = 1;
+                    modal.style.transition = 'opacity 1s ease';
+            }, 100)
+        } else {
+            modal.style.display = 'none !important';
+            setTimeout(function() {
+                    modal.style.opacity = 0;
+                    modal.style.transition = 'opacity 1s ease';
+            }, 100)
+        }
+});
+close_btn.addEventListener('click', () => {
+        modalActive = !modalActive; // Изменяем состояние модального окна
+    
+        if (modalActive) {
+            modal.setAttribute('style', 'display: block !important;');
             setTimeout(function() {
                     modal.style.opacity = 1;
                     modal.style.transition = 'opacity .5s ease';
             }, 100)
-        } else {
-            modal.style.display = 'none';
+    } else {
+            modal.setAttribute('style', 'display: none !important;');
             setTimeout(function() {
                     modal.style.opacity = 0;
                     modal.style.transition = 'opacity .5s ease';
             }, 100)
         }
-});
-modal_btn.addEventListener('click', () => {
-        modalActive = !modalActive; // Изменяем состояние модального окна
-    
-        if (modalActive) {
-                modal.style.display = 'block';
-                
-        } else {
-                modal.style.display = 'none';
-        }
-});
-modal_close.addEventListener('click', () => {
-        modalActive = !modalActive; // Изменяем состояние модального окна
-    
-        if (modalActive) {
-                modal.style.display = 'block';
-                
-        } else {
-                modal.style.display = 'none';
-        }
-});
+    });
