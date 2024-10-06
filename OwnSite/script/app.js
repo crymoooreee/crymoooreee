@@ -29,22 +29,22 @@ aboutBtn.addEventListener('click', () => {
     }
 });
 talk_btn.addEventListener('click', () => {
-modalActive = !modalActive; // Изменяем состояние модального окна
+        modalActive = !modalActive; // Изменяем состояние модального окна
     
         if (modalActive) {
-            modal.style.display = 'block !important';
+            modal.setAttribute('style', 'display: block !important;');
             setTimeout(function() {
                     modal.style.opacity = 1;
                     modal.style.transition = 'opacity 1s ease';
-            }, 100)
-        } else {
-            modal.style.display = 'none !important';
+            }, 300)
+    } else {
+            modal.setAttribute('style', 'display: none !important;');
             setTimeout(function() {
                     modal.style.opacity = 0;
                     modal.style.transition = 'opacity 1s ease';
-            }, 100)
+            }, 300)
         }
-});
+    });
 close_btn.addEventListener('click', () => {
         modalActive = !modalActive; // Изменяем состояние модального окна
     
