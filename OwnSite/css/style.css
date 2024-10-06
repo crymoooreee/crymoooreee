@@ -430,7 +430,12 @@ body .bg-body-secondary {
     --bs-btn-disabled-bg: #9747FF !important;
     --bs-btn-disabled-border-color: #9747FF !important;
 }
-
+.modal {
+    --bs-modal-border-color: transparent !important;
+}
+.btn-close {
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem #9747ff42 !important;
+}
 
 @media (max-width: 1200px) {
     .about_com {
