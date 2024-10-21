@@ -15,7 +15,7 @@ li img {
     min-width: 200px;
     margin: 20px auto;
     padding: 30px 50px;
-    background-color: white;
+    background-color: var(--color_main);
 }
 
 /* General styles */
@@ -28,7 +28,7 @@ li img {
     padding: 0;
     list-style-type: none;
     position: relative;
-    box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 5px var(--color_submain);
     border-radius: 15px;
 }
 
@@ -63,6 +63,7 @@ div.sim-slider-arrow-left {
     top: 40%;
     display: block;
     background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+    filter: invert();
 }
 
 div.sim-slider-arrow-right {
@@ -70,6 +71,7 @@ div.sim-slider-arrow-right {
     top: 40%;
     display: block;
     background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+    filter: invert();
 }
 
 div.sim-slider-arrow-left:hover {
@@ -89,14 +91,13 @@ div.sim-slider-dots {
     z-index: 3;
     text-align: center;
 }
-
 span.sim-dot {
     width: 10px;
     height: 10px;
     margin: 5px 7px;
     padding: 0;
     display: inline-block;
-    background-color: #BBB;
+    background-color: var(--color_btns);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -112,9 +113,20 @@ span.sim-dot {
     div.sim-slider-arrow-right {
         right: 100px;
         top: 100%;
+        filter: invert();
     }
     div.sim-slider-arrow-left {
         left: 100px;
         top: 100%;
+        filter: invert();
     }
+}
+
+
+:root {
+    --color_main: #1d1d1d;
+    --color_text: #ffffff;
+    --color_submain: #2b2b2b;
+    --color_btns: #25d162;
+    --color_btnshover: #188840;
 }

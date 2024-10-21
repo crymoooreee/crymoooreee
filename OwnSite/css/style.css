@@ -1,11 +1,19 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+body{
+    background-color: var(--color_main) !important;
+    color: var(--color_text) !important;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: Inter;
     overflow-x: none;
     /* border: 1px solid black; */
+}
+.text {
+    color: var(--color_text);
 }
 html {
     scroll-behavior: smooth;
@@ -21,13 +29,13 @@ hr {
 }
 .wrapper {
     margin-top: 10%;
-    background-color: white;
+    background-color: var(--color_main);
     width: 100%;
     height: 100vh;
 }
 .wrapper_about {
     margin-top: 10%;
-    background-color: white;
+    background-color: var(--color_main);
     width: 100%;
     height: auto;
 }
@@ -35,7 +43,7 @@ hr {
     padding-top: 1%;
     display: flex;
     width: 100%;
-    background-color: white;
+    background-color: var(--color_main);
     align-content: center;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -46,7 +54,7 @@ hr {
     padding-top: 2px;
     margin-left: 2%;
     text-decoration: none;
-    color: black;
+    color: var(--color_text);
     font-size: 30px;
     font-weight: bold;
     transition: all .2s ease;
@@ -56,7 +64,7 @@ hr {
     content: "";
     height: 2px;
     width: 0%;
-    background-color: black;
+    background-color: var(--color_btns);
     transition: width 0.4s ease-in-out
 }
 .nav_btn:hover::after, .nav_btn:focus:after {
@@ -157,8 +165,8 @@ hr {
 .about_btn, .talk_btn {
     position: relative;
     left: 5%;
-    border: 1px solid #9747FF;
-    color: #9747FF;
+    border: 1px solid var(--color_btns);
+    color: var(--color_btns);
     padding: 1.5%;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -168,8 +176,8 @@ hr {
     cursor: pointer;
 }
 .about_btn:hover, .talk_btn:hover, .modal_btn:hover {
-    background-color: #9747FF;
-    color: white;
+    background-color: var(--color_btns);
+    color: var(--color_main);
 }
 .about_end {
     text-align: center;
@@ -179,7 +187,7 @@ hr {
 }
 
 .works_container {
-    background-color: white;
+    background-color: var(--color_main);
     width: 100%;
     height: 90%;
     display: flex;
@@ -198,6 +206,7 @@ hr {
     padding: 1%;
     border-radius: 25px;
     transition: transform  .2s ease;
+    background-color: var(--color_submain);
 }
 .work:hover {
     transform: scale(1.15);
@@ -284,7 +293,7 @@ hr {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--color_main);
     box-shadow: 0px 0px 5px gray;
     transition: transform .2s ease;
     align-items: center;
@@ -332,7 +341,7 @@ hr {
 
 .inner_scrol_btn {
     text-decoration: none;
-    color: black;
+    color: var(--color_text);
 }
 .circle {
     position: relative;/*относительное позиционирование*/
@@ -348,8 +357,10 @@ hr {
     width: 150px;
     height: 150px;
     background: url(../img/96x96.png);
+    filter: invert();
     background-size: cover;
     zoom: 0.5;
+    color: var(--color_text);
 }
 .text {
     position: absolute;
@@ -404,6 +415,12 @@ p span {
     position: fixed !important;
     display: none !important;
 }
+#modal_content {
+    background-color: var(--color_submain) !important;
+}
+#form_color {
+    color: var(--color_main) !important;
+}
 
 body .bg-body-secondary {
     --bs-bg-opacity: 1;
@@ -415,26 +432,28 @@ body .bg-body-secondary {
 .form-control:focus {
     color: var(--bs-body-color);
     background-color: var(--bs-body-bg);
-    border-color: #9747FF !important;
+    border-color: var(--color_btns) !important;
     outline: 0;
-    box-shadow: 0 0 0 .25rem #9747ff42 !important;
+    box-shadow: 0 0 0 .25rem var(--color_btns) !important;
 }
 .btn-primary {
-    --bs-btn-bg: #9747FF !important;
-    --bs-btn-border-color: #9747FF !important;
-    --bs-btn-hover-bg: #7437c5 !important;
-    --bs-btn-hover-border-color: #7437c5 !important;
-    --bs-btn-active-bg: #9747FF !important;
-    --bs-btn-active-border-color: #7437c5 !important;
-    --bs-btn-focus-shadow-rgb: #9747FF !important;
-    --bs-btn-disabled-bg: #9747FF !important;
-    --bs-btn-disabled-border-color: #9747FF !important;
+    --bs-btn-bg: var(--color_btns) !important;
+    --bs-btn-border-color: var(--color_btns) !important;
+    --bs-btn-hover-bg: var(--color_btnshover) !important;
+    --bs-btn-hover-border-color: var(--color_btnshover) !important;
+    --bs-btn-active-bg: var(--color_btns) !important;
+    --bs-btn-active-border-color: var(--color_btns) !important;
+    --bs-btn-focus-shadow-rgb: var(--color_btns) !important;
+    --bs-btn-disabled-bg: var(--color_btns) !important;
+    --bs-btn-disabled-border-color: var(--color_btns) !important;
+    color: var(--color_main) !important;
 }
 .modal {
     --bs-modal-border-color: transparent !important;
 }
 .btn-close {
-    --bs-btn-close-focus-shadow: 0 0 0 0.25rem #9747ff42 !important;
+    filter: invert();
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0) !important;
 }
 
 @media (max-width: 1200px) {
@@ -459,7 +478,7 @@ body .bg-body-secondary {
     }
     .wrapper_about{
         display: flex;
-        background-color: white;
+        background-color: var(--color_main);
         width: 100%;
         height: auto;
         flex-direction: column;
@@ -496,4 +515,13 @@ body .bg-body-secondary {
     #fotter_block {
         left: 0%;
     }
+}
+
+
+:root {
+    --color_main: #1d1d1d;
+    --color_text: #ffffff;
+    --color_submain: #2b2b2b;
+    --color_btns: #25d162;
+    --color_btnshover: #188840;
 }
