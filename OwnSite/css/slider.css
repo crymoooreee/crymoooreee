@@ -21,6 +21,7 @@ li img {
 /* General styles */
 .sim-slider {
     position: relative;
+    transition: .5s ease;
 }
 
 .sim-slider-list {

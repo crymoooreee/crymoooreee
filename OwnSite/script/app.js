@@ -19,13 +19,13 @@ aboutBtn.addEventListener('click', () => {
         setTimeout(function() {
                 modal.style.opacity = 1;
                 modal.style.transition = 'opacity 1s ease';
-        }, 300)
+        }, 0)
 } else {
         modal.setAttribute('style', 'display: none !important;');
         setTimeout(function() {
                 modal.style.opacity = 0;
                 modal.style.transition = 'opacity 1s ease';
-        }, 300)
+        }, 0)
     }
 });
 talk_btn.addEventListener('click', () => {
@@ -36,13 +36,13 @@ talk_btn.addEventListener('click', () => {
             setTimeout(function() {
                     modal.style.opacity = 1;
                     modal.style.transition = 'opacity 1s ease';
-            }, 300)
+            }, 0)
     } else {
             modal.setAttribute('style', 'display: none !important;');
             setTimeout(function() {
                     modal.style.opacity = 0;
                     modal.style.transition = 'opacity 1s ease';
-            }, 300)
+            }, 0)
         }
     });
 close_btn.addEventListener('click', () => {
