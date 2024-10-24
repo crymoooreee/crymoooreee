@@ -5,7 +5,7 @@ body{
     color: var(--color_text) !important;
 }
 
-body, .wrapper, .nav, .text, .logo, .nav_btn, .wrapper_about, .works_container {
+body, .wrapper, .nav, .text, .logo, .nav_btn, .wrapper_about, .works_container, .circle_button, .dot {
     transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
 }
 
