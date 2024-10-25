@@ -23,6 +23,9 @@
                     <a class="nav_btn" href="#section1">CRY</a>
                     <span id="nav_title">HTML CSS JAVA SCRIPT<br>DEVELOPERS</span>
                     <a class="circle_button" href="#"><span class="dot"></span></a>
+                    <a class="language_button" href="#" id="language-toggle">
+                        <span class="language-text">EN</span>
+                    </a>
                 </div>
                 <div class="nav_block">
                     <a id="nav_right" class="nav_btn" href="#section2">Home</a>
@@ -35,8 +38,8 @@
 
             <div class="inner" id="section2">
                 <div class="inner_container">
-                    <span class="inner_title">Hello people!</span>                    
-                    <span class="inner_text">WELCOME TO<br> CRY STUDIO</span>
+                    <span id="inner_title" class="inner_title">Hello people!</span>                    
+                    <span id="inner_text" class="inner_text">WELCOME TO<br> CRY STUDIO</span>
                 </div>
                 <div class="inner_scrol">
                     <!-- <a class="inner_scrol_btn" href="#section6"><img class="scroll" src="img/scroll.png"></a> -->
@@ -56,7 +59,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content rounded-4 shadow" id="modal_content">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
-                  <h1 class="fw-bold mb-0 fs-2">Contact us</h1>
+                  <h1 id="modal_title" class="fw-bold mb-0 fs-2">Contact us</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                   
@@ -64,21 +67,21 @@
                   <form action="./mail.php" method="post">
                     <div class="form-floating mb-3" id="form_color">
                       <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com">
-                      <label for="email">Email address</label>
+                      <label id="mail" for="email">Email address</label>
                     </div>
                     <div class="form-floating mb-3" id="form_color">
                       <input type="text" class="form-control rounded-3" id="name" name="name" placeholder="Your Name">
-                      <label for="name">Your Name</label>
+                      <label id="name1" for="name">Your Name</label>
                     </div>
                     <div class="form-floating mb-3" id="form_color">
                         <input type="text" class="form-control rounded-3" id="phone" name="phone" placeholder="Phone Number">
-                        <label for="phone">Phone Number</label>
+                        <label id="phone1" for="phone">Phone Number</label>
                       </div>
                       <div class="form-floating mb-3" id="form_color">
                         <input type="text" class="form-control rounded-3" id="message" name="message" placeholder="Message">
-                        <label for="message">Message</label>
+                        <label id="message1" for="message">Message</label>
                       </div>
-                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Contact</button>
+                    <button id="modal_contact" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Contact</button>
                   </form>
                 </div>
               </div>
@@ -88,14 +91,14 @@
         <div class="wrapper_about" id="section3">
             <div class="container_main">
                 <div class="text-content">
-                    <p class="about_title" >ABOUT</p>
-                    <p class="about_text_title" >We make beautiful websites for you!</p>
-                    <p class="about_text" >
+                    <p id="about_title" class="about_title" >ABOUT</p>
+                    <p id="about_text_title" class="about_text_title" >We make beautiful websites for you!</p>
+                    <p id="about_text" class="about_text" >
                     Our team develops unique and<br>
                     functional websites that reflect your<br>
                     personality and attract customers. We<br>
                     combine stylish design with usability.</p>
-                    <p class="about_text" >Let's realize your ideas together!</p>
+                    <p id="about_text2" class="about_text" >Let's realize your ideas together!</p>
                 </div>
                 <h1 class="about_com">CRY <br><span class="studio-name">STUDIO</span></h1>
             </div>
@@ -103,7 +106,7 @@
         </div>
 
         <div class="wrapper" id="section4">
-            <h1 class="about_end">FEATURED WORKS</h1>
+            <h1 id="about_end" class="about_end">FEATURED WORKS</h1>
             <div class="works_container">
                 <div class="work">
                     <a class="work_btn" href="work1.html"><img class="work_img" src="img/work1/work1_1.png"></a>
@@ -119,7 +122,7 @@
 
         <div class="wrapper" id="section5">
             <div class="service">
-                <h1 class="service_title">Our Services</h1>
+                <h1 id="service_title" class="service_title">Our Services</h1>
                 <div class="service_container">
                     <div class="service_subcontainer">
                         <h1 class="servire_subtitle">Adaptation</h1>
@@ -177,6 +180,7 @@
 
         <script src="script/app.js"></script>
         <script src="script/theme.js"></script>
+        <script src="script/language.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
     <meta name="mailru-domain" content="1yeAxduMtK7OhNQX" />

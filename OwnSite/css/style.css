@@ -1,4 +1,44 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+body.light-theme::-webkit-scrollbar {
+    width: 10px;
+    /* ширина scrollbar */
+}
+
+body.light-theme::-webkit-scrollbar-track {
+    background: var(--color_text);
+    /* цвет дорожки */
+    transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
+}
+
+body.light-theme::-webkit-scrollbar-thumb {
+    background-color: var(--color_btns);
+    /* цвет плашки */
+    border-radius: 20px;
+    /* закругления плашки */
+    border: 2px solid var(--color_submain);
+    /* padding вокруг плашки */
+    transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
+}
+body.dark-theme::-webkit-scrollbar {
+    width: 10px;
+    /* ширина scrollbar */
+}
+
+body.dark-theme::-webkit-scrollbar-track {
+    background: var(--color_submain);
+    /* цвет дорожки */
+    transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+    background-color: var(--color_btns);
+    /* цвет плашки */
+    border-radius: 20px;
+    /* закругления плашки */
+    border: 2px solid var(--color_submain);
+    /* padding вокруг плашки */
+    transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
+}
 
 body{
     background-color: var(--color_main) !important;
@@ -83,11 +123,12 @@ hr {
     color: #939395;
     font-size: 12px !important;
     font-weight: 400;
+    margin-right: 7%;
 }
 .nav_block {
     margin-right: 2%;
     max-width: 720px;
-    width: 325px;
+    width: 450px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -471,7 +512,6 @@ body .bg-body-secondary {
 }
 
 .circle_button {
-    margin-left: 5%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -490,6 +530,44 @@ body .bg-body-secondary {
     border-radius: 50%;
     position: relative;
     left: -10px;
+}
+
+.language_button {
+    margin-left: 5%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--color_submain);
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.language-text {
+    font-weight: bold;
+    transition: opacity 0.3s ease; /* Плавный переход для непрозрачности текста */
+}
+
+/* Скрываем текст при смене */
+.language-text.hidden {
+    opacity: 0; /* Скрываем текст */
+}
+
+#inner_title, #inner_text, #modal_title, #mail, #name, #phone, #message {
+    transition: opacity 0.3s ease;
+}
+#inner_title.hidden, #inner_text.hidden, #modal_title.hidden, #mail.hidden, #name.hidden, #phone.hidden, #message.hidden {
+    opacity: 0;
+}
+
+.fade-out {
+    transition: opacity 0.3s; /* Время должно соответствовать времени перехода в JavaScript */
+    opacity: 0;
 }
 
 @media (max-width: 1200px) {
