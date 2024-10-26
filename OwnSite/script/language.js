@@ -17,7 +17,9 @@ const service_subtitles = document.querySelectorAll('.servire_subtitle');
 const service_texts = document.querySelectorAll('.service_text');
 const talk_title = document.querySelector('.talk_title');
 const talk_text = document.querySelector('.talk_text');
-
+const your_tasks = document.getElementById('your_tasks');
+const listify_btn = document.querySelector('.listify_btn');
+const listify_text = document.querySelector('.listify_text');
 // Получаем язык из localStorage или устанавливаем по умолчанию
 let isEnglish = localStorage.getItem('language') === 'en';
 
@@ -37,7 +39,14 @@ function updateText() {
         }
     };
     
+    
+    service_subtitles.forEach(subtitle => fadeOut(subtitle));
+    service_texts.forEach(text => fadeOut(text));
     fadeOut(languageText);
+    fadeOut(listify_text);
+    fadeOut(listify_btn);
+    fadeOut(your_tasks);
+    fadeOut(window.listify_add);
     fadeOut(inner_title);
     fadeOut(inner_text);
     fadeOut(modal_title);
@@ -51,14 +60,24 @@ function updateText() {
     fadeOut(about_text2);
     fadeOut(about_end);
     fadeOut(service_title);
-    service_subtitles.forEach(subtitle => fadeOut(subtitle));
-    service_texts.forEach(text => fadeOut(text));
     fadeOut(talk_title);
     fadeOut(talk_text);
-
+    
     setTimeout(() => {
         if (inner_title) {
             inner_title.innerHTML = isEnglish ? "Hello people!" : "Привет, народ!";
+        }
+        if (listify_btn) {
+            listify_btn.textContent = isEnglish ? "About Listify" : "О Listify"; // Изменяем текст кнопки
+        }
+        if(window.listify_add){
+            window.listify_add.innerHTML = isEnglish ? "Add a task" : "Добавить задачу";
+        }
+        if(listify_text) {
+            listify_text.innerHTML = isEnglish ? "Listify is a simple and concise ToDoList for managing your tasks. It allows you to easily add, edit, delete and track tasks. The app's interface is intuitive and not cluttered with unnecessary elements, allowing you to focus on the important things. Listify is ideal for those who appreciate" : "Listify — это простой и лаконичный ToDoList для управления вашими задачами. С его помощью вы сможете легко добавлять, редактировать и удалять задачи, а также отслеживать их выполнение. Интерфейс приложения интуитивно понятен и не загроможден лишними элементами, что позволяет сосредоточиться на важных делах. Listify идеально подходит для тех, кто ценит простоту и эффективность в организации своего времени.";
+        }
+        if(your_tasks) {
+            your_tasks.innerHTML = isEnglish ? "Your tasks" : "Ваши задачи";
         }
         if (inner_text) {
             inner_text.innerHTML = isEnglish ? "WELCOME TO<br>CRY STUDIO" : "Привет от<br>CRY STUDIO";

@@ -17,6 +17,11 @@ const footertext = document.getElementById("footer_text");
 const modalcont = document.getElementById("modal_content");
 const left = document.querySelector(".sim-slider-arrow-left");
 const right = document.querySelector(".sim-slider-arrow-right");
+const listify_wrapper = document.querySelector(".listify_wrapper");
+const listify_container = document.querySelector(".listify_container");
+const listify_add = document.querySelector(".listify_add");
+const container1 = document.getElementById("container");
+window.listify_add = listify_add;
 
 // Проверяем сохраненную тему в localStorage
 let btn = localStorage.getItem('theme') === 'dark'; // true, если сохранена темная тема
@@ -32,7 +37,7 @@ function applyTheme() {
     // Остальной код для темной темы...
     if (dot) {
       dot.style.left = "-10px";
-      dot.style.transition = ".5s ease";
+      dot.style.transition = ".2s ease";
       dot.style.backgroundColor = "#ffffff";
       theme.style.backgroundColor = "#2b2b2b";
     }
@@ -40,14 +45,35 @@ function applyTheme() {
     body.style.setProperty("background-color", "#1d1d1d", "important");
     body.style.setProperty("color", "#ffffff", "important");
     body.style.transition = ".5s ease";
-    
-    if(lang ) { 
+
+    // Применяем стили для новых div элементов
+    updateNewDivStyles("#ffffff", "#1d1d1d");
+
+    if (listify_add) {
+      listify_add.style.setProperty("color", "#ffffff", "important");
+    }
+
+    if (listify_wrapper) {
+      listify_wrapper.style.setProperty("color", "#ffffff", "important");
+      listify_wrapper.style.setProperty("background-color", "#1d1d1d", "important");
+    }
+
+    if (listify_container) {
+      listify_container.style.setProperty("color", "#ffffff", "important");
+      listify_container.style.setProperty("background-color", "#2d2d2d", "important");
+    }
+    if (container1) {
+      container1.style.setProperty("color", "#ffffff", "important");
+      container1.style.setProperty("background-color", "#2d2d2d", "important");
+    }
+
+    if (lang) {
       lang.style.setProperty("background-color", "#2b2b2b", "important");
       lang.style.setProperty("color", "#ffffff", "important");
     }
 
-    if(slider){
-        slider.style.setProperty("background-color", "#1d1d1d", "important");
+    if (slider) {
+      slider.style.setProperty("background-color", "#1d1d1d", "important");
     }
 
     works.forEach(work => {
@@ -65,14 +91,14 @@ function applyTheme() {
       nav.style.setProperty("color", "#ffffff", "important");
     }
 
-    if ( wrapperabout) {
+    if (wrapperabout) {
       wrapperabout.style.setProperty("background-color", "#1d1d1d", "important");
       wrapperabout.style.setProperty("color", "#ffffff", "important");
     }
 
     if (workscont) {
-      workscont.style.setProperty("background-color", "#1d1d1d", "important");
-      workscont.style .setProperty("color", "#ffffff", "important");
+      workscont.style.setProperty("background-color", "#1d1d1d ", "important");
+      workscont.style.setProperty("color", "#ffffff", "important");
     }
 
     if (modalcont) {
@@ -103,10 +129,11 @@ function applyTheme() {
     if (btnclose) {
       btnclose.style.filter = "invert()";
     }
-    
+
     if (left) {
-      left.style.filter = "invert()";
+      left.style .filter = "invert()";
     }
+
     if (right) {
       right.style.filter = "invert()";
     }
@@ -117,7 +144,7 @@ function applyTheme() {
     // Остальной код для светлой темы...
     if (dot) {
       dot.style.left = "10px";
-      dot.style.transition = ".5s ease";
+      dot.style.transition = ".2s ease";
       dot.style.backgroundColor = "#2b2b2b";
       theme.style.backgroundColor = "#00000020";
     }
@@ -125,14 +152,35 @@ function applyTheme() {
     body.style.setProperty("background-color", "#ffffff", "important");
     body.style.setProperty("color", "#1d1d1d", "important");
     body.style.transition = ".5s ease";
-    
-    if(lang) {
+
+    // Применяем стили для новых div элементов
+    updateNewDivStyles("#1d1d1d", "#ffffff");
+
+    if (listify_add) {
+      listify_add.style.setProperty("color", "#1d1d1d", "important");
+    }
+
+    if (listify_wrapper) {
+      listify_wrapper.style.setProperty("color", "#1d1d1d", "important");
+      listify_wrapper.style.setProperty("background-color", "#ffffff", "important");
+    }
+
+    if (listify_container) {
+      listify_container.style.setProperty("color", "#1d1d1d", "important");
+      listify_container.style.setProperty("background-color", "#00000020", "important");
+    }
+    if(container1) {
+      container1.style.setProperty("color", "#1d1d1d", "important");
+      container1.style.setProperty("background-color", "#00000020", "important");
+    }
+
+    if (lang) {
       lang.style.setProperty("background-color", "#00000020", "important");
       lang.style.setProperty("color", "#1d1d1d", "important");
     }
 
-    if(slider){
-        slider.style.setProperty("background-color", "#ffffff", "important");
+    if (slider) {
+      slider.style.setProperty("background-color", "#ffffff", "important");
     }
 
     works.forEach(work => {
@@ -151,7 +199,7 @@ function applyTheme() {
     }
 
     if (wrapperabout) {
-      wrapperabout.style.setProperty("background-color", "#ffffff", "important");
+      wrapperabout.style.setProperty("background-color", "#ffffff", " important");
       wrapperabout.style.setProperty("color", "#1d1d1d", "important");
     }
 
@@ -188,12 +236,46 @@ function applyTheme() {
     if (btnclose) {
       btnclose.style.filter = "none";
     }
-    if (right) {
-      right.style.filter = "none";
-    }
+
     if (left) {
       left.style.filter = "none";
     }
+
+    if (right) {
+      right.style.filter = "none";
+    }
+  }
+}
+
+// Функция для обновления стилей новых div элементов
+function updateNewDivStyles(color, backgroundColor) {
+  const newDivs = document.querySelectorAll(".new-div");
+  newDivs.forEach(div => {
+    div.style.setProperty("color", color, "important");
+    div.style.setProperty("background-color", backgroundColor, "important");
+  });
+}
+
+// Функция для создания нового div элемента
+function createNewDiv() {
+  const newDiv = document.createElement("div");
+  newDiv.classList.add("new-div");
+
+  // Применяем стили для нового div элемента
+  applyNewDivStyles(newDiv);
+
+  // Добавляем новый div элемент на страницу
+  document.body.appendChild(newDiv);
+}
+
+// Функция для применения стилей к новому div элементу
+function applyNewDivStyles(div) {
+  if (btn) {
+    div.style.setProperty("color", "#ffffff", "important");
+    div.style.setProperty("background-color", "#1d1d1d", "important");
+  } else {
+    div.style.setProperty("color", "#1d1d1d", "important");
+    div.style.setProperty("background-color", "#ffffff", "important");
   }
 }
 
@@ -205,4 +287,11 @@ theme.addEventListener("click", () => {
   btn = !btn;
   localStorage.setItem('theme', btn ? 'dark' : 'light'); // Сохраняем выбранную тему
   applyTheme(); // Применяем выбранную тему
+});
+
+theme.addEventListener("click", () => {
+  isDarkTheme = !isDarkTheme;
+  localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+  applyTheme();
+  updateAllDivStyles(); // Добавьте эту строку
 });
