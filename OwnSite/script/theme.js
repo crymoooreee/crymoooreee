@@ -21,6 +21,7 @@ const listify_wrapper = document.querySelector(".listify_wrapper");
 const listify_container = document.querySelector(".listify_container");
 const listify_add = document.querySelector(".listify_add");
 const container1 = document.getElementById("container");
+const container_main = document.querySelector(".container_main");
 window.listify_add = listify_add;
 
 // Проверяем сохраненную тему в localStorage
@@ -45,7 +46,11 @@ function applyTheme() {
     body.style.setProperty("background-color", "#1d1d1d", "important");
     body.style.setProperty("color", "#ffffff", "important");
     body.style.transition = ".5s ease";
-
+    
+    if(container_main){
+      container_main.style.setProperty("background-color", "#1d1d1d", "important");
+      container_main.style.setProperty("color", "#ffffff", "important");
+    }
     // Применяем стили для новых div элементов
     updateNewDivStyles("#ffffff", "#1d1d1d");
 
@@ -152,7 +157,11 @@ function applyTheme() {
     body.style.setProperty("background-color", "#ffffff", "important");
     body.style.setProperty("color", "#1d1d1d", "important");
     body.style.transition = ".5s ease";
-
+    
+    if(container_main){
+      container_main.style.setProperty("background-color", "#ffffff", "important");
+      container_main.style.setProperty("color", "#1d1d1d", "important");
+    }
     // Применяем стили для новых div элементов
     updateNewDivStyles("#1d1d1d", "#ffffff");
 
@@ -197,11 +206,10 @@ function applyTheme() {
       nav.style.setProperty("background-color", "#ffffff", "important");
       nav.style.setProperty("color", "#1d1d1d", "important");
     }
-
-    if (wrapperabout) {
-      wrapperabout.style.setProperty("background-color", "#ffffff", " important");
-      wrapperabout.style.setProperty("color", "#1d1d1d", "important");
-    }
+if (wrapperabout) {
+  wrapperabout.style.setProperty("background-color", btn ? "#1d1d1d" : "#ffffff", "important");
+  wrapperabout.style.setProperty("color", btn ? "#ffffff" : "#1d1d1d", "important");
+}
 
     if (workscont) {
       workscont.style.setProperty("background-color", "#ffffff", "important");

@@ -20,6 +20,7 @@ const talk_text = document.querySelector('.talk_text');
 const your_tasks = document.getElementById('your_tasks');
 const listify_btn = document.querySelector('.listify_btn');
 const listify_text = document.querySelector('.listify_text');
+const modal_title1 = document.getElementById('modal_title1');
 // Получаем язык из localStorage или устанавливаем по умолчанию
 let isEnglish = localStorage.getItem('language') === 'en';
 
@@ -43,6 +44,7 @@ function updateText() {
     service_subtitles.forEach(subtitle => fadeOut(subtitle));
     service_texts.forEach(text => fadeOut(text));
     fadeOut(languageText);
+    fadeOut(modal_title1);
     fadeOut(listify_text);
     fadeOut(listify_btn);
     fadeOut(your_tasks);
@@ -66,6 +68,9 @@ function updateText() {
     setTimeout(() => {
         if (inner_title) {
             inner_title.innerHTML = isEnglish ? "Hello people!" : "Привет, народ!";
+        }
+        if (modal_title1) {
+            modal_title1.innerHTML = isEnglish ? "Create a new task" : "Создать новую задачу";
         }
         if (listify_btn) {
             listify_btn.textContent = isEnglish ? "About Listify" : "О Listify"; // Изменяем текст кнопки
