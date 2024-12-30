@@ -1,0 +1,122 @@
+body{ 
+    font-family: "Montserrat";
+    color: var(--color_text);
+    background-color: var(--color_main);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.card_container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 300px;
+    height: 220px;
+    background-color: var(--color_submain);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    gap: 13px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px var(--color_submain);
+  }
+  
+  #cookieSvg {
+    width: 50px;
+  }
+  
+  #cookieSvg g path {
+    fill: rgb(168, 114, 77);
+  }
+  
+  .cookieHeading {
+    font-size: 1.2em;
+    font-weight: 800;
+    color: var(--color_text);
+  }
+  
+  .cookieDescription {
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: var(--color_download-text);
+  }
+  
+  .cookieDescription a {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246);
+  }
+  
+  .cookieDescription a:hover {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  
+  .acceptButton {
+    width: 80px;
+    height: 30px;
+    background-color: var(--color_second);
+    transition-duration: .2s;
+    border: none;
+    color: var(--color_main);
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px var(--color_second), 0 2px 4px -1px var(--color_second);
+    transition: all .6s ease;
+  }
+  
+  .declineButton {
+    width: 80px;
+    height: 30px;
+    background-color: #dadada;
+    transition-duration: .2s;
+    color: rgb(46, 46, 46);
+    border: none;
+    cursor: not-allowed;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px #bebdbd, 0 2px 4px -1px #bebdbd;
+    transition: all .6s ease;
+  }
+  
+  .declineButton:hover {
+    background-color: #ebebeb;
+    box-shadow: 0 10px 15px -3px #bebdbd, 0 4px 6px -2px #bebdbd;
+    transition-duration: .2s;
+  }
+  
+  .acceptButton:hover {
+    background-color: var(--color_main);
+    box-shadow: 0 10px 15px -3px var(--color_main), 0 4px 6px -2px var(--color_main);
+    transition-duration: .2s;
+    color: var(--color_text);
+  }
+
+  :root {
+    --color_main: #272b3b;
+    --color_submain: #101422;
+    --color_nav: #101422c5;
+    --color_text: #F6F2F6;
+    --color_download-text: #b8b8b8;
+    --color_second: #a8dce7;
+    --color_bracet: #363a47;
+}

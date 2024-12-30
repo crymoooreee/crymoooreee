@@ -1,0 +1,118 @@
+body {
+  background-color: var(--color_main);
+  font-family: "Montserrat";
+  color: var(--color_text);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.modal {
+  height: 99vh;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.modal_container {
+  padding: 50px;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  background-color: var(--color_submain);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  color: var(--color_text);
+  font-family: sans-serif;
+  font-size: clamp(18px, 4vw, 40px);
+  font-weight: 600;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color_text);
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input-container {
+  height: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  background-color: var(--color_main);
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 40px;
+  outline: 0;
+  padding: 4px 10px 0;
+  width: 100%;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: var(--color_download-text);
+  font-family: sans-serif;
+  left: 5%;
+  line-height: 0px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-35px) translateX(-10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: var(--color_text);
+}
+
+.submit {
+  background-color: var(--color_second);
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--color_main);
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+:root {
+  --color_main: #272b3b;
+  --color_submain: #101422;
+  --color_nav: #101422c5;
+  --color_text: #f6f2f6;
+  --color_download-text: #b8b8b8;
+  --color_second: #a8dce7;
+  --color_bracet: #363a47;
+}
