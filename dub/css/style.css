@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
+@import url('https://fonts.cdnfonts.com/css/myriad-pro');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Myriad Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+.main {
+    background-image: url(../img/main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    box-shadow: inset 0em 4em 100px 0px #000, inset 0 -4em 100px #000;
+}
+
+.btn_img {
+    width: 24px;
+    height: 24px;
+}
+.btn span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+.menu {
+    display: none;
+    background-color: var(--color_menu);
+    width: 146px;
+    height: 131px;
+    border-radius: 7px;
+    list-style: none;
+    position: absolute;
+    right: 2%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color_text);
+    margin-left: 20%;
+}
+#admin_panel {
+    color: var(--color_admin);
+}
+.menu_btn {
+    text-decoration: none;
+    color: var(--color_text);
+    margin-left: 7%;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    line-height: 30px;
+}
+.main_gif {
+    position: absolute;
+    left: -7%;
+    /* bottom: 0; */
+    top: 14%;
+}
+.logo img {
+    height: 111px;
+    width: 111px;
+}
+.nav_title {
+    color: var(--color_text);
+    font-size: 47px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 22.55px;
+    text-align: center;
+}
+.nav_text {
+    position: absolute;
+    left: 42.5%;
+    top: 1%;
+}
+.profile_ava {
+    position: absolute;
+    height: 68px;
+    width: 68px;
+    top: 1%;
+    right: 2%;
+}
+.search_img {
+    height: 34.64px;
+    width: 34.64px;
+}
+.nav_search {
+    top: 1.5%;
+    right: 7%;
+    position: absolute;
+}
+.nav_subtitle {
+    color: var(--color_text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.32px;
+    font-family: "Atomic Age", system-ui;
+}
+.main_suptitle {
+    color: var(--color_text);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 45.6px;
+    text-align: center;
+    position: absolute;
+    left: 30.5%;
+    bottom: 0;
+}
+.main_suptitle-bottom {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.list {
+    background-image: url(../img/list2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 3188px;
+    width: 100%;
+    background-color: var(--color_listbg);
+}
+.list_btn {
+    font-size: 40px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--color_text);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    left: 2%;
+    position: absolute;
+}
+.boosty_img {
+    height: 90px;
+    width: 203px;
+}
+
+.title_list {
+    padding-left: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 350px;
+    overflow: scroll;
+}
+.title_list::-webkit-scrollbar {
+    width: 0;
+  }
+.list_boosty {
+    padding-top: 2%;
+    padding-bottom: 10%;
+}
+.list_ongoing {
+    color: var(--color_text);
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+.title {
+    width: 196px;
+    height: 324px;
+    margin-right: 2%;
+}
+.title_img, .title_img-gif {
+    height: 276px;
+    width: 196px;   
+    border-radius: 15px;
+    background-color: var(--color_titlebg);
+}
+.title_img-gif {
+    height: auto;
+    width: auto;
+}
+.title_name {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    color: var(--color_text);
+}
+.title_subname {
+    font-family: "Roboto", sans-serif;
+    color: var(--color_text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.footer_text {
+    bottom: 0;
+    left: 25%;
+    position: absolute;
+    text-align: center;
+    height: 400px;
+    font-size: 24px;
+    color: var(--color_text);
+    font-weight: 600;
+    font-family: 'Roboto';
+    line-height: 33.98px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--color_footer);
+    width: 100%;
+    height: 264px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_text-bottom {
+    font-size: 10px;
+    color: var(--color_text);
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    font-family: "Roboto", sans-serif;
+}
+.footer_author {
+    padding-right: 5%;
+}
+.author {
+    padding-top: 15%;
+}
+.author_img {
+    border-radius: 10px;
+}
+.author_text {
+    font-family: "Roboto", sans-serif;
+    color: var(--color_text);
+    font-size: 12px;
+    font-weight: 700;
+}
+.author_case {
+    display: flex;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.author_name {
+    position: absolute;
+    color: var(--color_text);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    margin-left: 1%;
+    text-shadow: #000 1px 0 10px;
+}
+
+:root {
+    --color_installbtnbg: rgba(18, 78, 56, 1);
+    --color_installbtnspan: rgba(14, 44, 33, 1);
+    --color_text: white;
+    --color_comment: rgba(149, 149, 149, 1);
+    --color_titlelable: rgba(187, 187, 187, 1);
+    --color_titleage: rgba(255, 255, 255, 0.48);
+    --color_installbtn: rgba(168, 168, 168, 1);
+    --color_rating-text: rgba(224, 224, 224, 1);
+    --color_install: rgba(156, 106, 106, 1);
+    --color_admin: rgba(236, 110, 110, 1);
+    --color_commentbtn: rgba(203, 70, 70, 1);
+    --color_like: rgba(181, 59, 59, 1);
+    --color_titlebg: rgba(148, 57, 57, 1);
+    --color_footer: rgba(55, 12, 12, 1);
+    --color_rating: rgba(36, 17, 17, 1);
+    --color_listbg: rgba(24, 9, 9, 1);
+    --color_menu: rgba(24, 9, 9, 1);
+    --color_bg: rgba(24, 9, 9, 1);
+    --color_comments: rgba(16, 12, 12, 1);
+}

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Портфолио — Crymoooreee</title>
+        <meta name="description" content="Портфолио веб-дизайнера и фронтенд-разработчика.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="bg_grid" aria-hidden="true"></div>
+
+        <header class="site_header reveal">
+            <div class="brand">
+                <span class="brand_mark">C</span>
+                <div class="brand_text">
+                    <span class="brand_name">Crymoooreee</span>
+                    <span class="brand_role">Web Designer & Frontend</span>
+                </div>
+            </div>
+            <nav class="nav_links">
+                <a href="#projects">Проекты</a>
+                <a href="#about">Обо мне</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </header>
+
+        <section class="hero reveal">
+            <div class="hero_content">
+                <h1 class="hero_title">Делаю сайты, которые выглядят как продукт будущего</h1>
+                <p class="hero_subtitle">Концепция, дизайн и чистая верстка. С фокусом на скорость, конверсию и вау‑эффект.</p>
+                <div class="hero_actions">
+                    <a class="btn_primary" href="#projects">Смотреть работы</a>
+                    <a class="btn_ghost" href="#contact">Связаться</a>
+                </div>
+                <div class="hero_chips">
+                    <span>UI/UX</span>
+                    <span>3D‑сцены</span>
+                    <span>Анимации</span>
+                </div>
+            </div>
+
+            <div class="hero_visual" aria-hidden="true">
+                <div class="glow_orb"></div>
+                <div class="laptop">
+                    <div class="laptop_screen">
+                        <div class="screen_ui">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="screen_wave"></div>
+                    </div>
+                    <div class="laptop_base"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects reveal">
+            <div class="section_head">
+                <h2>Избранные проекты</h2>
+                <p>Каждый сайт — отдельная история с фокусом на задачу бизнеса и удобство пользователя.</p>
+            </div>
+            <div class="features">
+                <article class="feature reveal">
+                    <h3>PixelVPN</h3>
+                    <div class="feture_container">
+                        <p>Сервисный сайт для VPN‑провайдера. Четкая структура, доверие и конверсия.</p>
+                        <a class="feature_btn" href="../PixelVPN/index.html">Подробнее</a>
+                    </div>
+                </article>
+                <article class="feature reveal">
+                    <h3>OwnSite</h3>
+                    <div class="feture_container">
+                        <p>Личный сайт‑полигон: экспериментальные сетки, типографика и анимации.</p>
+                        <a class="feature_btn" href="../OwnSite/index.html">Подробнее</a>
+                    </div>
+                </article>
+                <article class="feature reveal">
+                    <h3>TaskFlow</h3>
+                    <div class="feture_container">
+                        <p>Визуальная демонстрация процесса управления задачами и командной работы.</p>
+                        <a class="feature_btn" href="../TaskFlow4/index.html">Подробнее</a>
+                    </div>
+                </article>
+                <article class="feature reveal">
+                    <h3>Dub</h3>
+                    <div class="feture_container">
+                        <p>Сайт‑витрина для студии дубляжа с акцентом на атмосферу и портфолио.</p>
+                        <a class="feature_btn" href="../dub/index.html">Подробнее</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about reveal">
+            <div class="about_card">
+                <h2>Обо мне</h2>
+                <p>Создаю сайты под конкретную задачу: от легкой промо‑страницы до сложного лендинга. Работаю аккуратно, соблюдаю сроки и беру на себя весь визуальный контроль.</p>
+                <div class="about_points">
+                    <span>Дизайн + верстка</span>
+                    <span>Быстрый запуск</span>
+                    <span>Фокус на конверсию</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact reveal">
+            <div class="contact_card">
+                <h2>Готовы обсудить проект?</h2>
+                <p>Напишите мне, и я предложу концепцию и сроки под вашу задачу.</p>
+                <div class="hero_actions">
+                    <a class="btn_primary" href="mailto:hello@example.com">Написать</a>
+                    <a class="btn_ghost" href="#">Скачать бриф</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer reveal">
+            <span>© 2026 Crymoooreee</span>
+            <span>Сделано с вниманием к деталям</span>
+        </footer>
+        <script>
+            const revealItems = document.querySelectorAll(".reveal");
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+            revealItems.forEach((item, index) => {
+                item.style.setProperty("--reveal-delay", `${index * 90}ms`);
+                observer.observe(item);
+            });
+        </script>
+    </body>
+</html>
