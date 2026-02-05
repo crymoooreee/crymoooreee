@@ -1,0 +1,612 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    background-color: var(--color_bg);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 0.5%;
+
+    padding-left: 1%;
+    padding-right: 1%;
+
+    background-color: white;
+    border-radius: 15px;
+
+    width: 60%;
+
+    margin: 1%;
+    box-shadow: 0px 0 20px #000000;
+}
+
+.logo_btn img{
+    height: 50px;
+}
+.logo_btn {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Inter";
+
+    width: 160px;
+
+    gap: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    transition: all .5s ease;
+}
+.nav_left, .nav_right {
+    width: auto;
+}
+
+.nav_right {
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px;
+    align-content: center;
+}
+
+.nav_btn {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Inter";
+    text-transform: uppercase;
+
+    transition: all .5s ease;
+}
+
+.nav_btn:hover, .logo_btn:hover {
+    scale: 1.05;
+}
+
+
+/* MAIN */
+
+.conteiner {
+    height: 100vh;
+    width: 80%;
+}
+
+.main {
+    background-color: white;
+    height: 500px;
+    width: 60%;
+
+    padding: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    
+    border-radius: 15px;
+    display: flex;
+
+    overflow: hidden;
+    box-shadow: 0px 0 20px #000000;
+
+}
+
+.main_left {
+    width: 70%;
+}
+
+.main_right {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_img {
+    height: 100%;
+    width: auto;
+
+    object-fit: contain;
+    pointer-events: none;
+
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #334155;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.main_title {
+    font-family: "Inter";
+    font-size: 46px;
+    font-weight: 700;
+    color: black;
+
+    margin-top: 20%;
+    margin-bottom: 2%;
+}
+
+.main_subtitle {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+
+    width: 80%;
+    line-height: 1.5;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag {
+    background-color: #50e3c23b;
+    color: black;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.main_btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #50e3c2;
+    color: black;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.main_btn:hover {
+    background-color: #3bbfa9;
+}
+.main_btn::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url('../img/download.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+/* advantages */
+.advantages {
+    margin-top: 50px;
+    width: 60%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.advantages_title {
+    grid-column: 1 / -1;
+
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+
+    margin-bottom: 10px;
+}
+
+
+.advantage_item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+
+    box-shadow: 0px 0 20px #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.advantage_icon {
+    width: 40px;
+    height: 40px;
+}
+
+.advantage_item_title {
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.advantage_item_subtitle {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    line-height: 1.5;
+}
+
+
+/* tarif */
+.tarif {
+    margin-top: 50px;
+    width: 60%;
+}
+
+.tarif_title {
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+
+    margin-bottom: 20px;
+}
+
+.tarif_items {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    box-shadow: 0px 0 20px #000000;
+}
+
+.tarif_item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tarif_item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+
+.tarif_item_popular {
+    border: 2px solid #50e3c2;
+    transform: scale(1.05);
+}
+
+.tarif_badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #50e3c2;
+    color: black;
+
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    font-family: "Inter";
+}
+
+
+.tarif_item_title {
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+
+    margin-bottom: 10px;
+}
+
+.tarif_item_price {
+    font-family: "Inter";
+    font-size: 28px;
+    font-weight: 700;
+    margin: 15px 0 20px;
+}
+
+.tarif_item_features {
+    font-family: "Inter";
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+
+    flex-grow: 1;
+}
+
+
+.tarif_item_features li {
+    font-family: "Inter";
+    margin-bottom: 10px;
+}
+
+.tarif_item_btn {
+    margin-top: auto;
+    font-family: "Inter";
+
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #50e3c2;
+    color: black;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.tarif_item_btn:hover {
+    background-color: #3bbfa9;
+    transform: scale(1.05);
+}
+
+
+/* how use */
+.howUse {
+    margin-top: 50px;
+    width: 60%;
+}
+
+.howUse_title {
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* сетка шагов */
+.howUse_steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* карточка шага */
+.howUse_step {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+
+    box-shadow: 0px 0 20px #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.howUse_step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* номер шага */
+.howUse_step_number {
+    width: 40px;
+    height: 40px;
+
+    background-color: #50e3c2;
+    color: black;
+
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 600;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* заголовок шага */
+.howUse_step_title {
+    font-family: "Inter";
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* описание */
+.howUse_step_subtitle {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    line-height: 1.5;
+}
+
+/* faq */
+.faq {
+    margin-top: 50px;
+    width: 60%;
+}
+
+.faq_title {
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.faq_item {
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+
+    box-shadow: 0px 0 20px #000000;
+    overflow: hidden;
+}
+
+.faq_question {
+    width: 100%;
+    padding: 20px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+.faq_icon {
+    font-size: 22px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.faq_answer {
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 20px;
+    font-family: "Inter";
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq_item.active .faq_answer {
+    max-height: 200px;
+    padding: 0 20px 20px;
+}
+
+.faq_item.active .faq_icon {
+    transform: rotate(45deg);
+}
+
+
+/* footer */
+footer {
+    margin-top: 50px;
+    color: black;
+    background-color: white;
+    width: 60%;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0.5% 0;
+    font-family: "Inter";
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer_nav {
+    font-family: "Inter";
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.footer_btn {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+.footer_btn img {    
+    height: 25px;
+}
+
+.footer_nav li {
+    transition: all .5s ease;
+}
+.footer_nav li:hover {
+    scale: 1.05;
+}
+
+.footer_title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer_right {
+    display: flex;
+    width: 70%;
+    justify-content: flex-end;
+    gap: 10%;
+}
+
+/* STAR BACKGROUND */
+#stars-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at top, #263238, #020617);
+}
+
+:root {
+    --color_bg: #263238;
+}
